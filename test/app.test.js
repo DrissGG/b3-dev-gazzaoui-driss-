@@ -1,4 +1,4 @@
-const {Isocele} = require("../src/app");
+const {Isocele, Cercle} = require("../src/app");
 const Cube = require('../src/app').Cube;
 const expect = require('chai').expect;
 
@@ -77,9 +77,32 @@ describe('Testing Triangle.js FUNCTION  ', function() {
         done();
     });
 
-    it('3:Isocele ', function(done) {
-        let LH = new Isocele(4,2,3);
-        expect(LH.getIsocele()).to.equal(false);
+    // it('3:Isocele ', function(done) {
+    //     let LH = new Isocele(4,2,3);
+    //     expect(LH.getIsocele()).to.equal(false);
+    //     done();
+    // });
+});
+
+describe('Testing Cercle fonction  ', function() {
+
+    it('1: le rayon du cercle', function(done) {
+        let LH = new Cercle(4);
+        expect(LH.getRayon()).to.equal(4);
+
         done();
     });
+    it('2:perimetre  du cercle', function(done) {
+        let P = new Cercle(4,);
+        expect(P.getPerimetre()).to.equal(25.1);
+        done();
+    });
+
+    it('2:Aire  du cercle', function(done) {
+        let P = new Cercle(4,);
+        expect(P.getAire()).to.equal(50.3);
+        done();
+    });
+
+
 });

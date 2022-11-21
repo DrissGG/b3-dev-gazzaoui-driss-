@@ -111,19 +111,35 @@ class Isocele{
             return message;
         }
 
-
-
-
-
     }
 
 }
 
+class Cercle{
+    constructor(rayon) {
+        this.rayon  = rayon;
+    }
+
+    getRayon () {
+        return this.rayon;
+    }
+    getPerimetre () {
+        return parseFloat((2*Math.PI*this.getRayon()).toFixed(1));
+    }
+
+    getAire () {
+    return parseFloat( ((Math.PI*Math.pow(this.getRayon(),2)).toFixed(1)) );
+    }
+
+
+
+}
 
 
 
 module.exports = {
     Cube:Cube,
     Triangle:Triangle,
-    Isocele:Isocele
+    Isocele:Isocele,
+    Cercle: Cercle
 }
